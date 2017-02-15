@@ -37,15 +37,15 @@ class PaginaInicialConfig extends \Base\Plantilla {
         parent::__construct();
         // Propiedades para la página inicial
         $this->en_raiz                  = true;
-        $this->titulo                   = 'CANACO / IMPLAN Torreón';
+        $this->titulo                   = 'CANACO Torreón / IMPLAN Torreón';
     //~ $this->autor                    = '';
-        $this->descripcion              = 'Descripción.';
+        $this->descripcion              = 'Sitio Web con colaboraciones de la Cámara Nacional de Comercio (CANACO) y el Instituto Municipal de Planeación y Competitividad de Torreón, Coahuila de Zaragoza, México.';
         $this->claves                   = 'IMPLAN, Torreon, CANACO';
         $this->directorio               = '.';
         $this->archivo_ruta             = "index.html";
         $this->imagen_previa_ruta       = 'imagenes/imagen-previa.jpg';
         $this->contenido_en_renglon     = FALSE;
-        $this->google_site_verification = '<meta name="google-site-verification" content="Hz-cnyG17CBaAXopvSHn7J81Za2cmg4dvnRh1VJE7ks">';
+        $this->google_site_verification = '';
     } // constructor
 
     /**
@@ -83,9 +83,9 @@ class PaginaInicialConfig extends \Base\Plantilla {
         $this->contenido[]  = '        </div>';
         $this->contenido[]  = '      </div>';
         $this->contenido[]  = '      <div class="col-md-4">';
-        $this->contenido[]  = '        <div class="red-social-twitter">';
+    //~ $this->contenido[]  = '        <div class="red-social-twitter">';
     //~ $this->contenido[]  = '          <a class="twitter-timeline" height="720px" href="https://twitter.com/trcimplan" data-chrome="nofooter transparent" data-theme="dark" data-widget-id="455819492145127424">Tweets por @trcimplan</a>';
-        $this->contenido[]  = '        </div>';
+    //~ $this->contenido[]  = '        </div>';
         $this->contenido[]  = '      </div>';
         $this->contenido[]  = '    </div>';
         $this->contenido[]  = '  </section>';

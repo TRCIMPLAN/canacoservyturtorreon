@@ -27,7 +27,7 @@ namespace Configuracion;
  */
 class NavegacionConfig {
 
-    protected $sitio_titulo = 'IMPLAN Torreón';
+    protected $sitio_titulo = 'CANACO Torreón / IMPLAN Torreón';
 //~ protected $logotipo     = 'imagenes/implan-barra-logo-chico-gris.png';
     protected $opciones     = array(
         'Análisis Publicados'                                         => 'blog/index.html',

@@ -27,7 +27,7 @@ namespace Configuracion;
  */
 class PlantillaConfig {
 
-    public $sitio_titulo    = 'CANACO / IMPLAN Torreón';
+    public $sitio_titulo    = 'CANACO Torreón / IMPLAN Torreón';
     public $sitio_url       = 'http://www.trcimplan.gob.mx/canacoservyturtorreon'; // Sin diagonal al final
     public $rss             = 'rss.xml';
     public $favicon         = 'imagenes/favicon.png';
