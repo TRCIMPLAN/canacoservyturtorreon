@@ -43,11 +43,30 @@ if [ ! -d "lib" ]; then
     echo "Error: No se encuentra el directorio $SITIO_WEB_DIR/lib."
     exit $E_FATAL
 fi
-if [ ! -d "bin" ]; then
-    mkdir css
+
+# Crear directorio css
+cd $SITIO_WEB_DIR
+if [ ! -d bin ]; then
+    echo "  Creando por primera vez el directorio bin..."
+    mkdir bin
 fi
-if [ ! -d "css" ]; then
+
+# Crear directorio css
+cd $SITIO_WEB_DIR
+if [ ! -d css ]; then
+    echo "  Creando por primera vez el directorio css..."
     mkdir css
+    cd $SITIO_WEB_DIR/css
+    cp -rf $PLATAFORMA_DIR/css/* .
+fi
+
+# Crear directorio imagenes
+cd $SITIO_WEB_DIR
+if [ ! -d imagenes ]; then
+    echo "  Creando por primera vez el directorio imagenes..."
+    mkdir imagenes
+    cd $SITIO_WEB_DIR/imagenes
+    cp -rf $PLATAFORMA_DIR/imagenes/* .
 fi
 
 # Eliminar
@@ -58,8 +77,6 @@ rm -rf img
 rm -rf js
 rm -rf less
 rm -rf scss
-cd $SITIO_WEB_DIR/css
-rm -f plataforma-de-conocimiento.css
 cd $SITIO_WEB_DIR/bin
 rm -f  Crear.php
 cd $SITIO_WEB_DIR/lib
@@ -74,8 +91,6 @@ cp -r $PLATAFORMA_DIR/img .
 cp -r $PLATAFORMA_DIR/js .
 cp -r $PLATAFORMA_DIR/less .
 cp -r $PLATAFORMA_DIR/scss .
-cd $SITIO_WEB_DIR/css
-cp $PLATAFORMA_DIR/css/plataforma-de-conocimiento.css .
 cd $SITIO_WEB_DIR/bin
 cp $PLATAFORMA_DIR/bin/Crear.php .
 cd $SITIO_WEB_DIR/lib

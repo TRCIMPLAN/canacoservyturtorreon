@@ -34,13 +34,15 @@ declare -a DIRECTORIOS=(
 # Destruir
 echo "[Destruir] Inicia..."
 cd "$SITIO_WEB_DIR"
+echo "  Eliminando archivos html y xml de la raiz..."
+rm -f *.html *.xml
 for DIRECTORIO in "${DIRECTORIOS[@]}"
 do
     if [ -d "$DIRECTORIO" ]; then
         echo "  Eliminando archivos html en $DIRECTORIO"
         rm -f "$DIRECTORIO/*.html"
     else
-        echo "  No existe $DIRECTORIO"
+        echo "  ERROR: No existe $DIRECTORIO"
         exit $E_FATAL
     fi
 done

@@ -27,7 +27,7 @@ namespace Configuracion;
  */
 class MapaInferiorConfig {
 
-    public $sitio_titulo = 'CANACO Torreón / IMPLAN Torreón';
+    public $sitio_titulo = 'CANACO / IMPLAN Torreón';
     public $logotipo     = 'imagenes/logotipo.png';
     public $en_raiz      = FALSE; // Si es verdadero los vínculos serán para un archivo en la raíz del sitio
 

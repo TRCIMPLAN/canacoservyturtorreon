@@ -28,7 +28,7 @@ namespace Configuracion;
 class RedifusionConfig {
 
     public $xml_encoding      = 'UTF-8';
-    public $sitio_titulo      = 'CANACO Torreón / IMPLAN Torreón';
+    public $sitio_titulo      = 'CANACO / IMPLAN Torreón';
     public $sitio_url         = 'http://www.trcimplan.gob.mx/canacoservyturtorreon'; // Sin diagonal al final
     public $sitio_descripcion = 'Últimas publicaciones de CANACO e IMPLAN de Torreón.';
     public $lenguaje          = 'es-MX';

@@ -37,7 +37,7 @@ class PaginaInicialConfig extends \Base\Plantilla {
         parent::__construct();
         // Propiedades para la página inicial
         $this->en_raiz                  = true;
-        $this->titulo                   = 'CANACO Torreón / IMPLAN Torreón';
+        $this->titulo                   = 'CANACO / IMPLAN Torreón';
     //~ $this->autor                    = '';
         $this->descripcion              = 'Sitio Web con colaboraciones de la Cámara Nacional de Comercio (CANACO) y el Instituto Municipal de Planeación y Competitividad de Torreón, Coahuila de Zaragoza, México.';
         $this->claves                   = 'IMPLAN, Torreon, CANACO';
@@ -73,7 +73,7 @@ class PaginaInicialConfig extends \Base\Plantilla {
         // Acumular Últimas Publicaciones y Twitter Timeline
         $this->contenido[]  = '  <section id="ultimas-publicaciones">';
         $this->contenido[]  = '    <div class="row">';
-        $this->contenido[]  = '      <div class="col-md-8">';
+        $this->contenido[]  = '      <div class="col-md-12">';
         $this->contenido[]  = '        <div class="ultimas">';
         $this->contenido[]  = '          <h2>Últimas publicaciones</h2>';
         $this->contenido[]  = $concentrador->html();
@@ -82,15 +82,13 @@ class PaginaInicialConfig extends \Base\Plantilla {
         $this->contenido[]  = '          </div>';
         $this->contenido[]  = '        </div>';
         $this->contenido[]  = '      </div>';
-        $this->contenido[]  = '      <div class="col-md-4">';
+    //~ $this->contenido[]  = '      <div class="col-md-4">';
     //~ $this->contenido[]  = '        <div class="red-social-twitter">';
-    //~ $this->contenido[]  = '          <a class="twitter-timeline" height="720px" href="https://twitter.com/trcimplan" data-chrome="nofooter transparent" data-theme="dark" data-widget-id="455819492145127424">Tweets por @trcimplan</a>';
+    //~ $this->contenido[]  = '          <a class="twitter-timeline" height="720px" href="https://twitter.com/canacotorreon" data-chrome="nofooter transparent" data-theme="dark" data-widget-id="455819492145127424">Tweets por @canacotorreon</a>';
     //~ $this->contenido[]  = '        </div>';
-        $this->contenido[]  = '      </div>';
+    //~ $this->contenido[]  = '      </div>';
         $this->contenido[]  = '    </div>';
         $this->contenido[]  = '  </section>';
-        // Acumular javascipt del Twitter Timeline
-    //~ $this->javascript[] = '';
     } // ultimas_publicaciones
 
     /**
