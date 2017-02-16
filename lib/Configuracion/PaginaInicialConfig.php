@@ -49,6 +49,26 @@ class PaginaInicialConfig extends \Base\Plantilla {
     } // constructor
 
     /**
+     * Organizacion
+     */
+    protected function organizacion() {
+        // Encabezado
+        $organizacion                 = new \PaginaInicial\Organizacion();
+        $organizacion->name           = 'CANACO';
+        $organizacion->description    = 'Cámara de Comercio, Servicios y Turismo de Torreón, Institución dedicada al desarrollo de estos Sectores, en beneficio de sus agremiados y la población.';
+        $organizacion->image          = 'imagenes/canacoservytur-48x48.png';
+        $organizacion->is_article     = FALSE;
+        $organizacion->big_heading    = TRUE;
+        $organizacion->headline_style = 'organizacion';
+        // Acumular
+        $this->contenido[] = '  <section id="organizacion">';
+    //~ $this->contenido[] = '    <a href="consejo-directivo/convocatoria-2015.html"><img class="banner" src="consejo-directivo/convocatoria-2015/banner.jpg" alt="Banner"></a>';
+        $this->contenido[] = '    <img class="banner" src="imagenes/canaco-trcimplan-encabezado.jpg" alt="CANACO / IMPLAN Torreón">';
+        $this->contenido[] = $organizacion->html();
+        $this->contenido[] = '  </section>';
+    } // organizacion
+
+    /**
      * Últimas publicaciones
      */
     protected function ultimas_publicaciones() {
@@ -82,11 +102,6 @@ class PaginaInicialConfig extends \Base\Plantilla {
         $this->contenido[]  = '          </div>';
         $this->contenido[]  = '        </div>';
         $this->contenido[]  = '      </div>';
-    //~ $this->contenido[]  = '      <div class="col-md-4">';
-    //~ $this->contenido[]  = '        <div class="red-social-twitter">';
-    //~ $this->contenido[]  = '          <a class="twitter-timeline" height="720px" href="https://twitter.com/canacotorreon" data-chrome="nofooter transparent" data-theme="dark" data-widget-id="455819492145127424">Tweets por @canacotorreon</a>';
-    //~ $this->contenido[]  = '        </div>';
-    //~ $this->contenido[]  = '      </div>';
         $this->contenido[]  = '    </div>';
         $this->contenido[]  = '  </section>';
     } // ultimas_publicaciones
@@ -98,7 +113,7 @@ class PaginaInicialConfig extends \Base\Plantilla {
      */
     public function html() {
         // Elaborar secciones
-    //~ $this->organizacion();
+        $this->organizacion();
     //~ $this->servicios();
         $this->ultimas_publicaciones();
     //~ $this->categorias();

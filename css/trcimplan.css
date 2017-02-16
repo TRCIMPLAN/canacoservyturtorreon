@@ -364,6 +364,9 @@ h3.detallados-encabezado { padding:0; border-bottom:none; }
 #organizacion .banner {
     width:100%;
 }
+.organizacion {
+    padding:2px;
+}
 .organizacion-logotipo {
     float:left;
     margin-right:8px;

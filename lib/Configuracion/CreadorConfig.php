@@ -44,7 +44,8 @@ class CreadorConfig {
     public function __construct() {
         $this->imprentas                = array(
             '\\Blog\\Imprenta',
-            '\\Contacto\\Imprenta');
+            '\\Contacto\\Imprenta',
+            '\\Terminos\\Imprenta');
         $this->imprentas_mapa_sitio     = $this->imprentas;
         $this->imprentas_redifusion     = $this->imprentas;
         $this->imprentas_autores        = array(

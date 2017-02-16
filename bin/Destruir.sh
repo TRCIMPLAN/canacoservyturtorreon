@@ -29,7 +29,8 @@ SITIO_WEB_DIR="$HOME/Documentos/GitHub/TrcIMPLAN/canacoservyturtorreon"
 # Definir directorios
 declare -a DIRECTORIOS=(
     "blog"
-    "contacto")
+    "contacto"
+    "terminos")
 
 # Destruir
 echo "[Destruir] Inicia..."
