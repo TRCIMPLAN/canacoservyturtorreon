@@ -28,8 +28,12 @@ SITIO_WEB_DIR="$HOME/Documentos/GitHub/TrcIMPLAN/canacoservyturtorreon"
 
 # Definir directorios
 declare -a DIRECTORIOS=(
+    "autores"
     "blog"
+    "categorias"
     "contacto"
+    "sig"
+    "sig-planes"
     "terminos")
 
 # Destruir
@@ -41,7 +45,7 @@ for DIRECTORIO in "${DIRECTORIOS[@]}"
 do
     if [ -d "$DIRECTORIO" ]; then
         echo "  Eliminando archivos html en $DIRECTORIO"
-        rm -f "$DIRECTORIO/*.html"
+        rm -f $DIRECTORIO/*.html
     else
         echo "  ERROR: No existe $DIRECTORIO"
         exit $E_FATAL

@@ -28,13 +28,12 @@ namespace Configuracion;
 class NavegacionConfig {
 
     protected $sitio_titulo = 'CANACO / IMPLAN Torreón';
-//~ protected $logotipo     = 'imagenes/implan-barra-logo-chico-gris.png';
+    protected $logotipo     = 'imagenes/canaco-trcimplan-barra.png';
     protected $opciones     = array(
         'Análisis Publicados'                                         => 'blog/index.html',
         'Indicadores' => array(
             'Indicadores > Introducción al SMI'                       => 'smi/introduccion.html',
-            'Indicadores > Indicadores por Categoría'                 => 'indicadores-categorias/index.html',
-            'Indicadores > Datos Abiertos'                            => 'smi/datos-abiertos.html'),
+            'Indicadores > Indicadores por Categoría'                 => 'indicadores-categorias/index.html'),
         'Información Geográfica' => array(
             'Información Geográfica > Introducción al SIG'            => 'sig/introduccion.html',
             'Información Geográfica > Planes'                         => 'sig-planes/index.html',

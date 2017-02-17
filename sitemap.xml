@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://www.trcimplan.gob.mx/canacoservyturtorreon/index.html</loc>
-    <lastmod>2017-02-16</lastmod>
+    <lastmod>2017-02-17</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -88,6 +88,11 @@
   <url>
     <loc>http://www.trcimplan.gob.mx/canacoservyturtorreon/contacto/contacto.html</loc>
     <lastmod>2017-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>http://www.trcimplan.gob.mx/canacoservyturtorreon/sig/introduccion.html</loc>
+    <lastmod>2014-08-01</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
