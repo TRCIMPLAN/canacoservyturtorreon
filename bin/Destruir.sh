@@ -32,7 +32,9 @@ declare -a DIRECTORIOS=(
     "blog"
     "categorias"
     "contacto"
+    "smi"
     "sig"
+    "sig-mapas-torreon"
     "sig-planes"
     "terminos")
 

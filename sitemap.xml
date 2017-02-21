@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://www.trcimplan.gob.mx/canacoservyturtorreon/index.html</loc>
-    <lastmod>2017-02-17</lastmod>
+    <lastmod>2017-02-21</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -91,8 +91,53 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>http://www.trcimplan.gob.mx/canacoservyturtorreon/smi/introduccion.html</loc>
+    <lastmod>2014-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>http://www.trcimplan.gob.mx/canacoservyturtorreon/sig/introduccion.html</loc>
     <lastmod>2014-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>http://www.trcimplan.gob.mx/canacoservyturtorreon/sig-mapas-torreon/ambito-regional-zona-metropolitana-laguna.html</loc>
+    <lastmod>2016-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>http://www.trcimplan.gob.mx/canacoservyturtorreon/sig-mapas-torreon/crecimiento-historico-torreon.html</loc>
+    <lastmod>2015-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>http://www.trcimplan.gob.mx/canacoservyturtorreon/sig-mapas-torreon/infraestructura-vial.html</loc>
+    <lastmod>2015-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>http://www.trcimplan.gob.mx/canacoservyturtorreon/sig-mapas-torreon/parques-industriales.html</loc>
+    <lastmod>2016-09-14</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>http://www.trcimplan.gob.mx/canacoservyturtorreon/sig-mapas-torreon/patrimonio-historico.html</loc>
+    <lastmod>2015-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>http://www.trcimplan.gob.mx/canacoservyturtorreon/sig-mapas-torreon/vida-en-ciudad.html</loc>
+    <lastmod>2015-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>http://www.trcimplan.gob.mx/canacoservyturtorreon/sig-mapas-torreon/zonificacion-primaria.html</loc>
+    <lastmod>2014-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>http://www.trcimplan.gob.mx/canacoservyturtorreon/sig-mapas-torreon/zonificacion-secundaria.html</loc>
+    <lastmod>2014-11-18</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
