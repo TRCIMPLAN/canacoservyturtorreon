@@ -45,10 +45,12 @@ class CreadorConfig {
         $this->imprentas                = array(
             '\\Blog\\Imprenta',
             '\\Contacto\\Imprenta',
-            '\\SMI\\Imprenta',
             '\\SIG\\Imprenta',
             '\\SIGMapasTorreon\\Imprenta',
             '\\SIGPlanes\\Imprenta',
+            '\\SMI\\Imprenta',
+            '\\SMICategorias\\Imprenta',
+            '\\SMIIndicadoresTorreon\\Imprenta',
             '\\Terminos\\Imprenta');
         $this->imprentas_mapa_sitio     = $this->imprentas;
         $this->imprentas_redifusion     = $this->imprentas;

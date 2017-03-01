@@ -41,6 +41,7 @@ declare -a DIRECTORIOS=(
 # Destruir
 echo "[Destruir] Inicia..."
 cd "$SITIO_WEB_DIR"
+find . -name .directory -delete
 echo "  Eliminando archivos html y xml de la raiz..."
 rm -f *.html *.xml
 for DIRECTORIO in "${DIRECTORIOS[@]}"
