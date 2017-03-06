@@ -32,10 +32,13 @@ declare -a DIRECTORIOS=(
     "blog"
     "categorias"
     "contacto"
-    "smi"
+    "indicadores-categorias"
+    "indicadores-la-laguna"
+    "indicadores-torreon"
     "sig"
     "sig-mapas-torreon"
     "sig-planes"
+    "smi"
     "terminos")
 
 # Destruir

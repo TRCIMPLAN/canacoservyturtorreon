@@ -50,6 +50,7 @@ class CreadorConfig {
             '\\SIGPlanes\\Imprenta',
             '\\SMI\\Imprenta',
             '\\SMICategorias\\Imprenta',
+            '\\SMIIndicadoresLaLaguna\\Imprenta',
             '\\SMIIndicadoresTorreon\\Imprenta',
             '\\Terminos\\Imprenta');
         $this->imprentas_mapa_sitio     = $this->imprentas;

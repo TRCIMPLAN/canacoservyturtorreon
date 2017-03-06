@@ -148,15 +148,15 @@ FINAL;
           </tr>
           <tr>
             <td>Coahuila</td>
-            <td>2016-11-30</td>
-            <td>0.73 %</td>
+            <td>2017-01-31</td>
+            <td>0.03 %</td>
             <td>Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública</td>
             <td></td>
           </tr>
           <tr>
             <td>Durango</td>
-            <td>2016-11-30</td>
-            <td>2.30 %</td>
+            <td>2017-01-31</td>
+            <td>0.22 %</td>
             <td>Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública</td>
             <td></td>
           </tr>
@@ -180,7 +180,7 @@ FINAL;
   if (typeof vargraficaOtrasRegiones === 'undefined') {
     vargraficaOtrasRegiones = Morris.Bar({
       element: 'graficaOtrasRegiones',
-      data: [{ region: 'Torreón', dato: 0 },{ region: 'Gómez Palacio', dato: 0 },{ region: 'Lerdo', dato: 0 },{ region: 'Matamoros', dato: 0 },{ region: 'La Laguna', dato: 0 },{ region: 'Coahuila', dato: 0.7300 },{ region: 'Durango', dato: 2.3000 }],
+      data: [{ region: 'Torreón', dato: 0 },{ region: 'Gómez Palacio', dato: 0 },{ region: 'Lerdo', dato: 0 },{ region: 'Matamoros', dato: 0 },{ region: 'La Laguna', dato: 0 },{ region: 'Coahuila', dato: 0.0300 },{ region: 'Durango', dato: 0.2200 }],
       xkey: 'region',
       ykeys: ['dato'],
       labels: ['Dato'],
