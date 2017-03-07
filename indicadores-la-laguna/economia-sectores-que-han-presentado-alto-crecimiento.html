@@ -135,7 +135,7 @@
 <!-- Contenido: Inicia  -->
   <ul class="nav nav-tabs lenguetas" id="smi-indicador">
     <li class="active"><a href="#smi-indicador-datos" data-toggle="tab">Datos</a></li>
-    <li><a href="#smi-indicador-grafica-1" data-toggle="tab">Gráfica 1</a></li>
+    <li><a href="#smi-indicador-grafica" data-toggle="tab">Gráfica</a></li>
     <li><a href="#smi-indicador-otras-regiones" data-toggle="tab">Otras regiones</a></li>
   </ul>
   <div class="tab-content lengueta-contenido">
@@ -155,12 +155,6 @@
             <td>31/12/2008</td>
             <td>7.11 %</td>
             <td>IMCO</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>31/12/2008</td>
-            <td>30.86 %</td>
-            <td>Elaboración propia con datos obtenidos del INEGI</td>
             <td></td>
           </tr>
           <tr>
@@ -194,9 +188,9 @@
 <p>Porcentaje del PIB de la ciudad.</p>
 
     </div>
-    <div class="tab-pane" id="smi-indicador-grafica-1">
-            <h3>Gráfica de Sectores que Han Presentado Alto Crecimiento en La Laguna con fuente IMCO</h3>
-      <div id="graficaDatosImco" class="grafica"></div>
+    <div class="tab-pane" id="smi-indicador-grafica">
+            <h3>Gráfica de Sectores que Han Presentado Alto Crecimiento en La Laguna</h3>
+      <div id="graficaDatos" class="grafica"></div>
       <p><b>Unidad:</b> Porcentaje.</p>
       <h3>Observaciones</h3>
 <p>Porcentaje del PIB de la ciudad.</p>
@@ -219,44 +213,37 @@
         <tbody>
           <tr>
             <td>Torreón</td>
-            <td>2012-12-31</td>
+            <td>31/12/2012</td>
             <td>11.68 %</td>
             <td>IMCO</td>
             <td></td>
           </tr>
           <tr>
             <td>Gómez Palacio</td>
-            <td>2012-12-31</td>
+            <td>31/12/2012</td>
             <td>32.13 %</td>
             <td>IMCO</td>
             <td></td>
           </tr>
           <tr>
             <td>Lerdo</td>
-            <td>2012-12-31</td>
+            <td>31/12/2012</td>
             <td>34.59 %</td>
             <td>IMCO</td>
             <td></td>
           </tr>
           <tr>
             <td>Matamoros</td>
-            <td>2012-12-31</td>
+            <td>31/12/2012</td>
             <td>29.77 %</td>
             <td>IMCO</td>
             <td></td>
           </tr>
           <tr>
             <td>La Laguna</td>
-            <td>2012-12-31</td>
+            <td>31/12/2012</td>
             <td>27.04 %</td>
             <td>IMCO</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Nacional</td>
-            <td>2009-01-01</td>
-            <td>26.44 %</td>
-            <td>Elaboración propia con datos obtenidos del INEGI</td>
             <td></td>
           </tr>
         </tbody>
@@ -304,10 +291,10 @@
 <script type="text/javascript" src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
 <!-- Javascript: Inicia  -->
 <script>
-$('#smi-indicador a[href="#smi-indicador-grafica-1"]').on('shown.bs.tab', function (e) {   // Gráfica
-  if (typeof vargraficaDatosImco === 'undefined') {
-    vargraficaDatosImco = Morris.Line({
-      element: 'graficaDatosImco',
+$('#smi-indicador a[href="#smi-indicador-grafica"]').on('shown.bs.tab', function (e) {   // Gráfica
+  if (typeof vargraficaDatos === 'undefined') {
+    vargraficaDatos = Morris.Line({
+      element: 'graficaDatos',
       data: [{ fecha: '2008-12-31', dato: 7.1100 },{ fecha: '2009-12-31', dato: 18.7000 },{ fecha: '2010-12-31', dato: 26.7700 },{ fecha: '2011-12-31', dato: 26.7500 },{ fecha: '2012-12-31', dato: 27.0400 }],
       xkey: 'fecha',
       ykeys: ['dato'],
@@ -321,7 +308,7 @@ $('#smi-indicador a[href="#smi-indicador-otras-regiones"]').on('shown.bs.tab', f
   if (typeof vargraficaOtrasRegiones === 'undefined') {
     vargraficaOtrasRegiones = Morris.Bar({
       element: 'graficaOtrasRegiones',
-      data: [{ region: 'Torreón', dato: 11.6800 },{ region: 'Gómez Palacio', dato: 32.1300 },{ region: 'Lerdo', dato: 34.5900 },{ region: 'Matamoros', dato: 29.7700 },{ region: 'La Laguna', dato: 27.0400 },{ region: 'Nacional', dato: 26.4400 }],
+      data: [{ region: 'Torreón', dato: 11.6800 },{ region: 'Gómez Palacio', dato: 32.1300 },{ region: 'Lerdo', dato: 34.5900 },{ region: 'Matamoros', dato: 29.7700 },{ region: 'La Laguna', dato: 27.0400 }],
       xkey: 'region',
       ykeys: ['dato'],
       labels: ['Dato'],

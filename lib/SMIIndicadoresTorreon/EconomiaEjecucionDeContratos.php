@@ -51,7 +51,7 @@ class EconomiaEjecucionDeContratos extends \SMIBase\PublicacionWeb {
         $this->estado                    = 'publicar';
         // Para el Organizador
         $this->categorias                = array('Empresas', 'Doing Business', 'Índice de Competitividad Urbana');
-        $this->fuentes                   = array('Doing Business', 'IMCO');
+        $this->fuentes                   = array('IMCO');
         $this->regiones                  = array('Torreón');
         // Inicializar las lengüetas
         $this->lenguetas                 = new \Base\Lenguetas('smi-indicador');
@@ -75,16 +75,6 @@ class EconomiaEjecucionDeContratos extends \SMIBase\PublicacionWeb {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>31/12/2007</td>
-            <td>386</td>
-            <td>Doing Business</td>
-            <td>En el tema de apertura de negocio Doing Business califica otros dos aspectos. Los resultados de 2007 para Torreón son: 
-
-- Índice de complejidad (1-100): 84 
-- Costo (% de la deuda): 20
-- Ranking en ejecución de contratos: 19</td>
-          </tr>
           <tr>
             <td>31/12/2008</td>
             <td>386</td>
@@ -112,33 +102,7 @@ class EconomiaEjecucionDeContratos extends \SMIBase\PublicacionWeb {
           <tr>
             <td>31/12/2012</td>
             <td>270</td>
-            <td>Doing Business</td>
-            <td>En el tema de apertura de negocio Doing Business califica otros dos aspectos. Los resultados de 2012 para Torreón son: 
-
-- # de procedimientos: 37 
-- Costo (% de cantidad demandada): 27.9 
-- Ranking en ejecución de contratos: 7</td>
-          </tr>
-          <tr>
-            <td>31/12/2012</td>
-            <td>270</td>
             <td>IMCO</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>31/10/2013</td>
-            <td>270</td>
-            <td>Doing Business</td>
-            <td>Dato obtenido del estudio elaborado por Doing Business de octubre de 2011 a octubre de 2013 y publicado en su reporte Doing Business en México 2014. 
-
-Los Indicadores complementarios en ejecución de contratos fueron los siguientes para Torreón: 
-Procedimientos (número) = 37 ; 
-Costo (% de cantidad demandada) = 27,9</td>
-          </tr>
-          <tr>
-            <td>31/12/2015</td>
-            <td>200</td>
-            <td>Doing Business</td>
             <td></td>
           </tr>
         </tbody>
@@ -151,14 +115,14 @@ FINAL;
     } // seccion_datos_html
 
     /**
-     * Sección Gráfica 1 HTML
+     * Sección Gráfica HTML
      *
      * @return string Código HTML
      */
-    protected function seccion_grafica_1_html() {
+    protected function seccion_grafica_html() {
         return <<<FINAL
-      <h3>Gráfica de Ejecución de Contratos en Torreón con fuente Doing Business</h3>
-      <div id="graficaDatosDoingBusiness" class="grafica"></div>
+      <h3>Gráfica de Ejecución de Contratos en Torreón</h3>
+      <div id="graficaDatos" class="grafica"></div>
       <p><b>Unidad:</b> Días.</p>
       <h3>Observaciones</h3>
 <p>Fuente: Doing Business en México, 2007, 2009, 2012.</p>
@@ -167,55 +131,16 @@ FINAL;
     } // seccion_grafica_html
 
     /**
-     * Sección Gráfica 1 JavaScript
+     * Sección Gráfica JavaScript
      *
      * @return string Código JavaScript
      */
-    protected function seccion_grafica_1_javascript() {
+    protected function seccion_grafica_javascript() {
         return <<<FINAL
   // Gráfica
-  if (typeof vargraficaDatosDoingBusiness === 'undefined') {
-    vargraficaDatosDoingBusiness = Morris.Line({
-      element: 'graficaDatosDoingBusiness',
-      data: [{ fecha: '2007-12-31', dato: 386 },{ fecha: '2012-12-31', dato: 270 },{ fecha: '2013-10-31', dato: 270 },{ fecha: '2015-12-31', dato: 200 }],
-      xkey: 'fecha',
-      ykeys: ['dato'],
-      labels: ['Dato'],
-      lineColors: ['#FF5B02'],
-      xLabelFormat: function(d) { return d.getDate()+'/'+(d.getMonth()+1)+'/'+d.getFullYear(); },
-      dateFormat: function(ts) { var d = new Date(ts); return d.getDate() + '/' + (d.getMonth() + 1) + '/' + d.getFullYear(); }
-    });
-  }
-FINAL;
-    } // seccion_grafica_javascript
-
-    /**
-     * Sección Gráfica 2 HTML
-     *
-     * @return string Código HTML
-     */
-    protected function seccion_grafica_2_html() {
-        return <<<FINAL
-      <h3>Gráfica de Ejecución de Contratos en Torreón con fuente IMCO</h3>
-      <div id="graficaDatosImco" class="grafica"></div>
-      <p><b>Unidad:</b> Días.</p>
-      <h3>Observaciones</h3>
-<p>Fuente: Doing Business en México, 2007, 2009, 2012.</p>
-
-FINAL;
-    } // seccion_grafica_html
-
-    /**
-     * Sección Gráfica 2 JavaScript
-     *
-     * @return string Código JavaScript
-     */
-    protected function seccion_grafica_2_javascript() {
-        return <<<FINAL
-  // Gráfica
-  if (typeof vargraficaDatosImco === 'undefined') {
-    vargraficaDatosImco = Morris.Line({
-      element: 'graficaDatosImco',
+  if (typeof vargraficaDatos === 'undefined') {
+    vargraficaDatos = Morris.Line({
+      element: 'graficaDatos',
       data: [{ fecha: '2008-12-31', dato: 386 },{ fecha: '2009-12-31', dato: 270 },{ fecha: '2010-12-31', dato: 270 },{ fecha: '2011-12-31', dato: 270 },{ fecha: '2012-12-31', dato: 270 }],
       xkey: 'fecha',
       ykeys: ['dato'],
@@ -251,35 +176,35 @@ FINAL;
         <tbody>
           <tr>
             <td>Torreón</td>
-            <td>2015-12-31</td>
-            <td>200</td>
-            <td>Doing Business</td>
+            <td>31/12/2012</td>
+            <td>270</td>
+            <td>IMCO</td>
             <td></td>
           </tr>
           <tr>
             <td>Gómez Palacio</td>
-            <td>2012-12-31</td>
+            <td>31/12/2012</td>
             <td>243</td>
             <td>IMCO</td>
             <td></td>
           </tr>
           <tr>
             <td>Lerdo</td>
-            <td>2012-12-31</td>
+            <td>31/12/2012</td>
             <td>243</td>
             <td>IMCO</td>
             <td></td>
           </tr>
           <tr>
             <td>Matamoros</td>
-            <td>2012-12-31</td>
+            <td>31/12/2012</td>
             <td>270</td>
             <td>IMCO</td>
             <td></td>
           </tr>
           <tr>
             <td>La Laguna</td>
-            <td>2012-12-31</td>
+            <td>31/12/2012</td>
             <td>256.5000</td>
             <td>IMCO</td>
             <td></td>
@@ -304,7 +229,7 @@ FINAL;
   if (typeof vargraficaOtrasRegiones === 'undefined') {
     vargraficaOtrasRegiones = Morris.Bar({
       element: 'graficaOtrasRegiones',
-      data: [{ region: 'Torreón', dato: 200 },{ region: 'Gómez Palacio', dato: 243 },{ region: 'Lerdo', dato: 243 },{ region: 'Matamoros', dato: 270 },{ region: 'La Laguna', dato: 256.5000 }],
+      data: [{ region: 'Torreón', dato: 270 },{ region: 'Gómez Palacio', dato: 243 },{ region: 'Lerdo', dato: 243 },{ region: 'Matamoros', dato: 270 },{ region: 'La Laguna', dato: 256.5000 }],
       xkey: 'region',
       ykeys: ['dato'],
       labels: ['Dato'],
@@ -322,10 +247,8 @@ FINAL;
     public function html() {
         // Ejecutar los métodos que alimentan cada lengüeta
         $this->lenguetas->agregar('smi-indicador-datos', 'Datos', $this->seccion_datos_html());
-        $this->lenguetas->agregar('smi-indicador-grafica-1', 'Gráfica 1', $this->seccion_grafica_1_html());
-        $this->lenguetas->agregar_javascript($this->seccion_grafica_1_javascript());
-        $this->lenguetas->agregar('smi-indicador-grafica-2', 'Gráfica 2', $this->seccion_grafica_2_html());
-        $this->lenguetas->agregar_javascript($this->seccion_grafica_2_javascript());
+        $this->lenguetas->agregar('smi-indicador-grafica', 'Gráfica', $this->seccion_grafica_html());
+        $this->lenguetas->agregar_javascript($this->seccion_grafica_javascript());
         $this->lenguetas->agregar('smi-indicador-otras-regiones', 'Otras regiones', $this->seccion_otras_regiones_html());
         $this->lenguetas->agregar_javascript($this->seccion_otras_regiones_javascript());
         $this->lenguetas->definir_activa(); // Primer lengüeta activa

@@ -51,7 +51,7 @@ class EconomiaSectoresQueHanPresentadoAltoCrecimiento extends \SMIBase\Publicaci
         $this->estado                    = 'publicar';
         // Para el Organizador
         $this->categorias                = array('Índice de Competitividad Urbana', 'Mercados');
-        $this->fuentes                   = array('IMCO', 'Elaboración propia con datos obtenidos del INEGI');
+        $this->fuentes                   = array('IMCO');
         $this->regiones                  = array('Torreón');
         // Inicializar las lengüetas
         $this->lenguetas                 = new \Base\Lenguetas('smi-indicador');
@@ -79,12 +79,6 @@ class EconomiaSectoresQueHanPresentadoAltoCrecimiento extends \SMIBase\Publicaci
             <td>31/12/2008</td>
             <td>3.09 %</td>
             <td>IMCO</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>31/12/2008</td>
-            <td>15.92 %</td>
-            <td>Elaboración propia con datos obtenidos del INEGI</td>
             <td></td>
           </tr>
           <tr>
@@ -121,14 +115,14 @@ FINAL;
     } // seccion_datos_html
 
     /**
-     * Sección Gráfica 1 HTML
+     * Sección Gráfica HTML
      *
      * @return string Código HTML
      */
-    protected function seccion_grafica_1_html() {
+    protected function seccion_grafica_html() {
         return <<<FINAL
-      <h3>Gráfica de Sectores que Han Presentado Alto Crecimiento en Torreón con fuente IMCO</h3>
-      <div id="graficaDatosImco" class="grafica"></div>
+      <h3>Gráfica de Sectores que Han Presentado Alto Crecimiento en Torreón</h3>
+      <div id="graficaDatos" class="grafica"></div>
       <p><b>Unidad:</b> Porcentaje.</p>
       <h3>Observaciones</h3>
 <p>Porcentaje del PIB de la ciudad.</p>
@@ -137,16 +131,16 @@ FINAL;
     } // seccion_grafica_html
 
     /**
-     * Sección Gráfica 1 JavaScript
+     * Sección Gráfica JavaScript
      *
      * @return string Código JavaScript
      */
-    protected function seccion_grafica_1_javascript() {
+    protected function seccion_grafica_javascript() {
         return <<<FINAL
   // Gráfica
-  if (typeof vargraficaDatosImco === 'undefined') {
-    vargraficaDatosImco = Morris.Line({
-      element: 'graficaDatosImco',
+  if (typeof vargraficaDatos === 'undefined') {
+    vargraficaDatos = Morris.Line({
+      element: 'graficaDatos',
       data: [{ fecha: '2008-12-31', dato: 3.0900 },{ fecha: '2009-12-31', dato: 9.8800 },{ fecha: '2010-12-31', dato: 11.9000 },{ fecha: '2011-12-31', dato: 11.4700 },{ fecha: '2012-12-31', dato: 11.6800 }],
       xkey: 'fecha',
       ykeys: ['dato'],
@@ -182,44 +176,37 @@ FINAL;
         <tbody>
           <tr>
             <td>Torreón</td>
-            <td>2012-12-31</td>
+            <td>31/12/2012</td>
             <td>11.68 %</td>
             <td>IMCO</td>
             <td></td>
           </tr>
           <tr>
             <td>Gómez Palacio</td>
-            <td>2012-12-31</td>
+            <td>31/12/2012</td>
             <td>32.13 %</td>
             <td>IMCO</td>
             <td></td>
           </tr>
           <tr>
             <td>Lerdo</td>
-            <td>2012-12-31</td>
+            <td>31/12/2012</td>
             <td>34.59 %</td>
             <td>IMCO</td>
             <td></td>
           </tr>
           <tr>
             <td>Matamoros</td>
-            <td>2012-12-31</td>
+            <td>31/12/2012</td>
             <td>29.77 %</td>
             <td>IMCO</td>
             <td></td>
           </tr>
           <tr>
             <td>La Laguna</td>
-            <td>2012-12-31</td>
+            <td>31/12/2012</td>
             <td>27.04 %</td>
             <td>IMCO</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Nacional</td>
-            <td>2009-01-01</td>
-            <td>26.44 %</td>
-            <td>Elaboración propia con datos obtenidos del INEGI</td>
             <td></td>
           </tr>
         </tbody>
@@ -242,7 +229,7 @@ FINAL;
   if (typeof vargraficaOtrasRegiones === 'undefined') {
     vargraficaOtrasRegiones = Morris.Bar({
       element: 'graficaOtrasRegiones',
-      data: [{ region: 'Torreón', dato: 11.6800 },{ region: 'Gómez Palacio', dato: 32.1300 },{ region: 'Lerdo', dato: 34.5900 },{ region: 'Matamoros', dato: 29.7700 },{ region: 'La Laguna', dato: 27.0400 },{ region: 'Nacional', dato: 26.4400 }],
+      data: [{ region: 'Torreón', dato: 11.6800 },{ region: 'Gómez Palacio', dato: 32.1300 },{ region: 'Lerdo', dato: 34.5900 },{ region: 'Matamoros', dato: 29.7700 },{ region: 'La Laguna', dato: 27.0400 }],
       xkey: 'region',
       ykeys: ['dato'],
       labels: ['Dato'],
@@ -260,8 +247,8 @@ FINAL;
     public function html() {
         // Ejecutar los métodos que alimentan cada lengüeta
         $this->lenguetas->agregar('smi-indicador-datos', 'Datos', $this->seccion_datos_html());
-        $this->lenguetas->agregar('smi-indicador-grafica-1', 'Gráfica 1', $this->seccion_grafica_1_html());
-        $this->lenguetas->agregar_javascript($this->seccion_grafica_1_javascript());
+        $this->lenguetas->agregar('smi-indicador-grafica', 'Gráfica', $this->seccion_grafica_html());
+        $this->lenguetas->agregar_javascript($this->seccion_grafica_javascript());
         $this->lenguetas->agregar('smi-indicador-otras-regiones', 'Otras regiones', $this->seccion_otras_regiones_html());
         $this->lenguetas->agregar_javascript($this->seccion_otras_regiones_javascript());
         $this->lenguetas->definir_activa(); // Primer lengüeta activa

@@ -51,7 +51,7 @@ class SeguridadDelitos extends \SMIBase\PublicacionWeb {
         $this->estado                    = 'publicar';
         // Para el Organizador
         $this->categorias                = array('Delincuencia', 'Seguridad');
-        $this->fuentes                   = array('Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública', 'Ayuntamiento de Torreón');
+        $this->fuentes                   = array('Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública');
         $this->regiones                  = array('Torreón');
         // Inicializar las lengüetas
         $this->lenguetas                 = new \Base\Lenguetas('smi-indicador');
@@ -280,12 +280,6 @@ class SeguridadDelitos extends \SMIBase\PublicacionWeb {
             <td></td>
           </tr>
           <tr>
-            <td>30/11/2016</td>
-            <td>899</td>
-            <td>Ayuntamiento de Torreón</td>
-            <td></td>
-          </tr>
-          <tr>
             <td>31/12/2016</td>
             <td>1220</td>
             <td>Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública</td>
@@ -304,29 +298,29 @@ FINAL;
     } // seccion_datos_html
 
     /**
-     * Sección Gráfica 1 HTML
+     * Sección Gráfica HTML
      *
      * @return string Código HTML
      */
-    protected function seccion_grafica_1_html() {
+    protected function seccion_grafica_html() {
         return <<<FINAL
-      <h3>Gráfica de Delitos en Torreón con fuente Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública</h3>
-      <div id="graficaDatosSecretariadoEjecutivoDelSistemaNacionalDeSeguridadPublica" class="grafica"></div>
+      <h3>Gráfica de Delitos en Torreón</h3>
+      <div id="graficaDatos" class="grafica"></div>
       <p><b>Unidad:</b> Cantidad.</p>
 FINAL;
     } // seccion_grafica_html
 
     /**
-     * Sección Gráfica 1 JavaScript
+     * Sección Gráfica JavaScript
      *
      * @return string Código JavaScript
      */
-    protected function seccion_grafica_1_javascript() {
+    protected function seccion_grafica_javascript() {
         return <<<FINAL
   // Gráfica
-  if (typeof vargraficaDatosSecretariadoEjecutivoDelSistemaNacionalDeSeguridadPublica === 'undefined') {
-    vargraficaDatosSecretariadoEjecutivoDelSistemaNacionalDeSeguridadPublica = Morris.Line({
-      element: 'graficaDatosSecretariadoEjecutivoDelSistemaNacionalDeSeguridadPublica',
+  if (typeof vargraficaDatos === 'undefined') {
+    vargraficaDatos = Morris.Line({
+      element: 'graficaDatos',
       data: [{ fecha: '2014-01-31', dato: 935 },{ fecha: '2014-02-28', dato: 841 },{ fecha: '2014-03-31', dato: 742 },{ fecha: '2014-04-30', dato: 702 },{ fecha: '2014-05-31', dato: 1054 },{ fecha: '2014-06-30', dato: 786 },{ fecha: '2014-07-31', dato: 730 },{ fecha: '2014-08-31', dato: 818 },{ fecha: '2014-09-30', dato: 754 },{ fecha: '2014-10-31', dato: 784 },{ fecha: '2014-11-30', dato: 597 },{ fecha: '2014-12-31', dato: 501 },{ fecha: '2015-01-31', dato: 783 },{ fecha: '2015-02-28', dato: 703 },{ fecha: '2015-03-31', dato: 600 },{ fecha: '2015-04-30', dato: 771 },{ fecha: '2015-05-31', dato: 592 },{ fecha: '2015-06-30', dato: 654 },{ fecha: '2015-07-31', dato: 597 },{ fecha: '2015-08-31', dato: 677 },{ fecha: '2015-09-30', dato: 670 },{ fecha: '2015-10-31', dato: 789 },{ fecha: '2015-11-30', dato: 700 },{ fecha: '2015-12-31', dato: 753 },{ fecha: '2016-01-31', dato: 745 },{ fecha: '2016-02-29', dato: 802 },{ fecha: '2016-03-31', dato: 901 },{ fecha: '2016-04-30', dato: 959 },{ fecha: '2016-05-31', dato: 1053 },{ fecha: '2016-06-30', dato: 1387 },{ fecha: '2016-07-31', dato: 970 },{ fecha: '2016-08-31', dato: 975 },{ fecha: '2016-09-30', dato: 1281 },{ fecha: '2016-10-31', dato: 1032 },{ fecha: '2016-12-31', dato: 1220 },{ fecha: '2017-01-31', dato: 959 }],
       xkey: 'fecha',
       ykeys: ['dato'],
@@ -362,35 +356,35 @@ FINAL;
         <tbody>
           <tr>
             <td>Torreón</td>
-            <td>2017-01-31</td>
+            <td>31/01/2017</td>
             <td>959</td>
             <td>Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública</td>
             <td></td>
           </tr>
           <tr>
             <td>Gómez Palacio</td>
-            <td>2017-01-31</td>
+            <td>31/01/2017</td>
             <td>614</td>
             <td>Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública</td>
             <td></td>
           </tr>
           <tr>
             <td>Lerdo</td>
-            <td>2017-01-31</td>
+            <td>31/01/2017</td>
             <td>205</td>
             <td>Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública</td>
             <td></td>
           </tr>
           <tr>
             <td>Matamoros</td>
-            <td>2017-01-31</td>
+            <td>31/01/2017</td>
             <td>110</td>
             <td>Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública</td>
             <td></td>
           </tr>
           <tr>
             <td>La Laguna</td>
-            <td>2017-01-31</td>
+            <td>31/01/2017</td>
             <td>1888</td>
             <td>Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública</td>
             <td></td>
@@ -430,8 +424,8 @@ FINAL;
     public function html() {
         // Ejecutar los métodos que alimentan cada lengüeta
         $this->lenguetas->agregar('smi-indicador-datos', 'Datos', $this->seccion_datos_html());
-        $this->lenguetas->agregar('smi-indicador-grafica-1', 'Gráfica 1', $this->seccion_grafica_1_html());
-        $this->lenguetas->agregar_javascript($this->seccion_grafica_1_javascript());
+        $this->lenguetas->agregar('smi-indicador-grafica', 'Gráfica', $this->seccion_grafica_html());
+        $this->lenguetas->agregar_javascript($this->seccion_grafica_javascript());
         $this->lenguetas->agregar('smi-indicador-otras-regiones', 'Otras regiones', $this->seccion_otras_regiones_html());
         $this->lenguetas->agregar_javascript($this->seccion_otras_regiones_javascript());
         $this->lenguetas->definir_activa(); // Primer lengüeta activa

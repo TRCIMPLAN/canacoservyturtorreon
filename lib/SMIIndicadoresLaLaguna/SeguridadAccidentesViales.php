@@ -248,35 +248,35 @@ FINAL;
         <tbody>
           <tr>
             <td>Torreón</td>
-            <td>2014-12-31</td>
+            <td>31/12/2014</td>
             <td>4421</td>
             <td>INEGI</td>
             <td></td>
           </tr>
           <tr>
             <td>Gómez Palacio</td>
-            <td>2014-12-31</td>
+            <td>31/12/2014</td>
             <td>1682</td>
             <td>INEGI</td>
             <td></td>
           </tr>
           <tr>
             <td>Lerdo</td>
-            <td>2014-12-31</td>
+            <td>31/12/2014</td>
             <td>362</td>
             <td>INEGI</td>
             <td></td>
           </tr>
           <tr>
             <td>Matamoros</td>
-            <td>2014-12-31</td>
+            <td>31/12/2014</td>
             <td>164</td>
             <td>INEGI</td>
             <td></td>
           </tr>
           <tr>
             <td>La Laguna</td>
-            <td>2014-12-31</td>
+            <td>31/12/2014</td>
             <td>6509</td>
             <td>INEGI</td>
             <td></td>

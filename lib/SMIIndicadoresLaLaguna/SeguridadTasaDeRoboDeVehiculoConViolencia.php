@@ -113,49 +113,49 @@ FINAL;
         <tbody>
           <tr>
             <td>Torreón</td>
-            <td>2015-03-31</td>
+            <td>31/03/2015</td>
             <td>No disponible</td>
             <td>Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública</td>
             <td>El dato proporcionado es estatal. De clic en la pestaña Otras Regiones.</td>
           </tr>
           <tr>
             <td>Gómez Palacio</td>
-            <td>2015-03-31</td>
+            <td>31/03/2015</td>
             <td>No disponible</td>
             <td>Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública</td>
             <td>El dato proporcionado es estatal. De clic en la pestaña Otras Regiones.</td>
           </tr>
           <tr>
             <td>Lerdo</td>
-            <td>2015-03-31</td>
+            <td>31/03/2015</td>
             <td>No disponible</td>
             <td>Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública</td>
             <td>El dato proporcionado es estatal. De clic en la pestaña Otras Regiones.</td>
           </tr>
           <tr>
             <td>Matamoros</td>
-            <td>2015-03-31</td>
+            <td>31/03/2015</td>
             <td>No disponible</td>
             <td>Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública</td>
             <td>El dato proporcionado es estatal. De clic en la pestaña Otras Regiones.</td>
           </tr>
           <tr>
             <td>La Laguna</td>
-            <td>2015-03-31</td>
+            <td>31/03/2015</td>
             <td>No disponible</td>
             <td>Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública</td>
             <td>El dato proporcionado es estatal. De clic en la pestaña Otras Regiones.</td>
           </tr>
           <tr>
             <td>Coahuila</td>
-            <td>2017-01-31</td>
+            <td>31/01/2017</td>
             <td>0.43 %</td>
             <td>Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública</td>
             <td></td>
           </tr>
           <tr>
             <td>Durango</td>
-            <td>2017-01-31</td>
+            <td>31/01/2017</td>
             <td>1.22 %</td>
             <td>Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública</td>
             <td></td>

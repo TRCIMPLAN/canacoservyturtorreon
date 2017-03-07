@@ -51,7 +51,7 @@ class SociedadEmpresasSocialmenteResponsables extends \SMIBase\PublicacionWeb {
         $this->estado                    = 'publicar';
         // Para el Organizador
         $this->categorias                = array('Índice de Competitividad Urbana', 'Empresas');
-        $this->fuentes                   = array('IMCO', 'Centro Mexicano para la Filantropía (Cemefi)');
+        $this->fuentes                   = array('IMCO');
         $this->regiones                  = array('La Laguna');
         // Inicializar las lengüetas
         $this->lenguetas                 = new \Base\Lenguetas('smi-indicador');
@@ -105,12 +105,6 @@ class SociedadEmpresasSocialmenteResponsables extends \SMIBase\PublicacionWeb {
             <td>IMCO</td>
             <td></td>
           </tr>
-          <tr>
-            <td>24/05/2016</td>
-            <td>0.0241</td>
-            <td>Centro Mexicano para la Filantropía (Cemefi)</td>
-            <td></td>
-          </tr>
         </tbody>
       </table>
       <p><b>Unidad:</b> Por cada 10 mil.</p>
@@ -121,14 +115,14 @@ FINAL;
     } // seccion_datos_html
 
     /**
-     * Sección Gráfica 1 HTML
+     * Sección Gráfica HTML
      *
      * @return string Código HTML
      */
-    protected function seccion_grafica_1_html() {
+    protected function seccion_grafica_html() {
         return <<<FINAL
-      <h3>Gráfica de Empresas Socialmente Responsables en La Laguna con fuente IMCO</h3>
-      <div id="graficaDatosImco" class="grafica"></div>
+      <h3>Gráfica de Empresas Socialmente Responsables en La Laguna</h3>
+      <div id="graficaDatos" class="grafica"></div>
       <p><b>Unidad:</b> Por cada 10 mil.</p>
       <h3>Observaciones</h3>
 <p>Fuente: Centro Mexicano para la Filantropía (CEMEFI).</p>
@@ -137,16 +131,16 @@ FINAL;
     } // seccion_grafica_html
 
     /**
-     * Sección Gráfica 1 JavaScript
+     * Sección Gráfica JavaScript
      *
      * @return string Código JavaScript
      */
-    protected function seccion_grafica_1_javascript() {
+    protected function seccion_grafica_javascript() {
         return <<<FINAL
   // Gráfica
-  if (typeof vargraficaDatosImco === 'undefined') {
-    vargraficaDatosImco = Morris.Line({
-      element: 'graficaDatosImco',
+  if (typeof vargraficaDatos === 'undefined') {
+    vargraficaDatos = Morris.Line({
+      element: 'graficaDatos',
       data: [{ fecha: '2008-12-31', dato: 0.8000 },{ fecha: '2009-12-31', dato: 0.8053 },{ fecha: '2010-12-31', dato: 0.8091 },{ fecha: '2011-12-31', dato: 0.8167 },{ fecha: '2012-12-31', dato: 2.4596 }],
       xkey: 'fecha',
       ykeys: ['dato'],
@@ -182,37 +176,37 @@ FINAL;
         <tbody>
           <tr>
             <td>Torreón</td>
-            <td>2016-05-24</td>
-            <td>0.0309</td>
-            <td>Centro Mexicano para la Filantropía (Cemefi)</td>
+            <td>31/12/2012</td>
+            <td>0.0000</td>
+            <td>IMCO</td>
             <td></td>
           </tr>
           <tr>
             <td>Gómez Palacio</td>
-            <td>2016-05-24</td>
-            <td>0.0214</td>
-            <td>Centro Mexicano para la Filantropía (Cemefi)</td>
+            <td>31/12/2012</td>
+            <td>10.4167</td>
+            <td>IMCO</td>
             <td></td>
           </tr>
           <tr>
             <td>Lerdo</td>
-            <td>2016-05-24</td>
+            <td>31/12/2012</td>
             <td>0.0000</td>
-            <td>Centro Mexicano para la Filantropía (Cemefi)</td>
+            <td>IMCO</td>
             <td></td>
           </tr>
           <tr>
             <td>Matamoros</td>
-            <td>2016-05-24</td>
+            <td>31/12/2012</td>
             <td>0.0000</td>
-            <td>Centro Mexicano para la Filantropía (Cemefi)</td>
+            <td>IMCO</td>
             <td></td>
           </tr>
           <tr>
             <td>La Laguna</td>
-            <td>2016-05-24</td>
-            <td>0.0241</td>
-            <td>Centro Mexicano para la Filantropía (Cemefi)</td>
+            <td>31/12/2012</td>
+            <td>2.4596</td>
+            <td>IMCO</td>
             <td></td>
           </tr>
         </tbody>
@@ -235,7 +229,7 @@ FINAL;
   if (typeof vargraficaOtrasRegiones === 'undefined') {
     vargraficaOtrasRegiones = Morris.Bar({
       element: 'graficaOtrasRegiones',
-      data: [{ region: 'Torreón', dato: 0.0309 },{ region: 'Gómez Palacio', dato: 0.0214 },{ region: 'Lerdo', dato: 0.0000 },{ region: 'Matamoros', dato: 0.0000 },{ region: 'La Laguna', dato: 0.0241 }],
+      data: [{ region: 'Torreón', dato: 0.0000 },{ region: 'Gómez Palacio', dato: 10.4167 },{ region: 'Lerdo', dato: 0.0000 },{ region: 'Matamoros', dato: 0.0000 },{ region: 'La Laguna', dato: 2.4596 }],
       xkey: 'region',
       ykeys: ['dato'],
       labels: ['Dato'],
@@ -253,8 +247,8 @@ FINAL;
     public function html() {
         // Ejecutar los métodos que alimentan cada lengüeta
         $this->lenguetas->agregar('smi-indicador-datos', 'Datos', $this->seccion_datos_html());
-        $this->lenguetas->agregar('smi-indicador-grafica-1', 'Gráfica 1', $this->seccion_grafica_1_html());
-        $this->lenguetas->agregar_javascript($this->seccion_grafica_1_javascript());
+        $this->lenguetas->agregar('smi-indicador-grafica', 'Gráfica', $this->seccion_grafica_html());
+        $this->lenguetas->agregar_javascript($this->seccion_grafica_javascript());
         $this->lenguetas->agregar('smi-indicador-otras-regiones', 'Otras regiones', $this->seccion_otras_regiones_html());
         $this->lenguetas->agregar_javascript($this->seccion_otras_regiones_javascript());
         $this->lenguetas->definir_activa(); // Primer lengüeta activa

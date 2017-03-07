@@ -51,7 +51,7 @@ class EconomiaPersonalOcupadoEnElComercio extends \SMIBase\PublicacionWeb {
         $this->estado                    = 'publicar';
         // Para el Organizador
         $this->categorias                = array('Empleo', 'Mercados');
-        $this->fuentes                   = array('INEGI', 'Elaboración propia con datos obtenidos del INEGI');
+        $this->fuentes                   = array('INEGI');
         $this->regiones                  = array('La Laguna');
         // Inicializar las lengüetas
         $this->lenguetas                 = new \Base\Lenguetas('smi-indicador');
@@ -93,12 +93,6 @@ class EconomiaPersonalOcupadoEnElComercio extends \SMIBase\PublicacionWeb {
             <td>INEGI</td>
             <td></td>
           </tr>
-          <tr>
-            <td>31/12/2013</td>
-            <td>27.70 %</td>
-            <td>Elaboración propia con datos obtenidos del INEGI</td>
-            <td></td>
-          </tr>
         </tbody>
       </table>
       <p><b>Unidad:</b> Porcentaje.</p>
@@ -109,14 +103,14 @@ FINAL;
     } // seccion_datos_html
 
     /**
-     * Sección Gráfica 1 HTML
+     * Sección Gráfica HTML
      *
      * @return string Código HTML
      */
-    protected function seccion_grafica_1_html() {
+    protected function seccion_grafica_html() {
         return <<<FINAL
-      <h3>Gráfica de Personal Ocupado en el Comercio en La Laguna con fuente INEGI</h3>
-      <div id="graficaDatosInegi" class="grafica"></div>
+      <h3>Gráfica de Personal Ocupado en el Comercio en La Laguna</h3>
+      <div id="graficaDatos" class="grafica"></div>
       <p><b>Unidad:</b> Porcentaje.</p>
       <h3>Observaciones</h3>
 <p>Datos obtenidos de <a href="http://www3.inegi.org.mx/sistemas/saic/">INEGI. Censos económicos</a></p>
@@ -125,16 +119,16 @@ FINAL;
     } // seccion_grafica_html
 
     /**
-     * Sección Gráfica 1 JavaScript
+     * Sección Gráfica JavaScript
      *
      * @return string Código JavaScript
      */
-    protected function seccion_grafica_1_javascript() {
+    protected function seccion_grafica_javascript() {
         return <<<FINAL
   // Gráfica
-  if (typeof vargraficaDatosInegi === 'undefined') {
-    vargraficaDatosInegi = Morris.Line({
-      element: 'graficaDatosInegi',
+  if (typeof vargraficaDatos === 'undefined') {
+    vargraficaDatos = Morris.Line({
+      element: 'graficaDatos',
       data: [{ fecha: '1998-12-31', dato: 22.5000 },{ fecha: '2003-12-31', dato: 25.4000 },{ fecha: '2008-12-31', dato: 28.0342 }],
       xkey: 'fecha',
       ykeys: ['dato'],
@@ -170,58 +164,44 @@ FINAL;
         <tbody>
           <tr>
             <td>Torreón</td>
-            <td>2013-12-31</td>
-            <td>26.95 %</td>
-            <td>Elaboración propia con datos obtenidos del INEGI</td>
+            <td>31/12/2008</td>
+            <td>27.65 %</td>
+            <td>INEGI</td>
             <td></td>
           </tr>
           <tr>
             <td>Gómez Palacio</td>
-            <td>2013-12-31</td>
-            <td>29.46 %</td>
-            <td>Elaboración propia con datos obtenidos del INEGI</td>
+            <td>31/12/2008</td>
+            <td>27.61 %</td>
+            <td>INEGI</td>
             <td></td>
           </tr>
           <tr>
             <td>Lerdo</td>
-            <td>2013-12-31</td>
-            <td>24.19 %</td>
-            <td>Elaboración propia con datos obtenidos del INEGI</td>
+            <td>31/12/2008</td>
+            <td>31.07 %</td>
+            <td>INEGI</td>
             <td></td>
           </tr>
           <tr>
             <td>Matamoros</td>
-            <td>2013-12-31</td>
-            <td>35.32 %</td>
-            <td>Elaboración propia con datos obtenidos del INEGI</td>
+            <td>31/12/2008</td>
+            <td>34.32 %</td>
+            <td>INEGI</td>
             <td></td>
           </tr>
           <tr>
             <td>La Laguna</td>
-            <td>2013-12-31</td>
-            <td>27.70 %</td>
-            <td>Elaboración propia con datos obtenidos del INEGI</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Coahuila</td>
-            <td>2013-12-31</td>
-            <td>22.83 %</td>
-            <td>Elaboración propia con datos obtenidos del INEGI</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Durango</td>
-            <td>2013-12-31</td>
-            <td>30.64 %</td>
-            <td>Elaboración propia con datos obtenidos del INEGI</td>
+            <td>31/12/2008</td>
+            <td>28.03 %</td>
+            <td>INEGI</td>
             <td></td>
           </tr>
           <tr>
             <td>Nacional</td>
-            <td>2013-12-31</td>
-            <td>29.61 %</td>
-            <td>Elaboración propia con datos obtenidos del INEGI</td>
+            <td>31/12/2008</td>
+            <td>30.50 %</td>
+            <td>INEGI</td>
             <td></td>
           </tr>
         </tbody>
@@ -244,7 +224,7 @@ FINAL;
   if (typeof vargraficaOtrasRegiones === 'undefined') {
     vargraficaOtrasRegiones = Morris.Bar({
       element: 'graficaOtrasRegiones',
-      data: [{ region: 'Torreón', dato: 26.9458 },{ region: 'Gómez Palacio', dato: 29.4578 },{ region: 'Lerdo', dato: 24.1890 },{ region: 'Matamoros', dato: 35.3180 },{ region: 'La Laguna', dato: 27.6995 },{ region: 'Coahuila', dato: 22.8278 },{ region: 'Durango', dato: 30.6424 },{ region: 'Nacional', dato: 29.6141 }],
+      data: [{ region: 'Torreón', dato: 27.6529 },{ region: 'Gómez Palacio', dato: 27.6120 },{ region: 'Lerdo', dato: 31.0701 },{ region: 'Matamoros', dato: 34.3232 },{ region: 'La Laguna', dato: 28.0342 },{ region: 'Nacional', dato: 30.5000 }],
       xkey: 'region',
       ykeys: ['dato'],
       labels: ['Dato'],
@@ -262,8 +242,8 @@ FINAL;
     public function html() {
         // Ejecutar los métodos que alimentan cada lengüeta
         $this->lenguetas->agregar('smi-indicador-datos', 'Datos', $this->seccion_datos_html());
-        $this->lenguetas->agregar('smi-indicador-grafica-1', 'Gráfica 1', $this->seccion_grafica_1_html());
-        $this->lenguetas->agregar_javascript($this->seccion_grafica_1_javascript());
+        $this->lenguetas->agregar('smi-indicador-grafica', 'Gráfica', $this->seccion_grafica_html());
+        $this->lenguetas->agregar_javascript($this->seccion_grafica_javascript());
         $this->lenguetas->agregar('smi-indicador-otras-regiones', 'Otras regiones', $this->seccion_otras_regiones_html());
         $this->lenguetas->agregar_javascript($this->seccion_otras_regiones_javascript());
         $this->lenguetas->definir_activa(); // Primer lengüeta activa

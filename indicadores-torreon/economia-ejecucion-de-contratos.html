@@ -135,8 +135,7 @@
 <!-- Contenido: Inicia  -->
   <ul class="nav nav-tabs lenguetas" id="smi-indicador">
     <li class="active"><a href="#smi-indicador-datos" data-toggle="tab">Datos</a></li>
-    <li><a href="#smi-indicador-grafica-1" data-toggle="tab">Gráfica 1</a></li>
-    <li><a href="#smi-indicador-grafica-2" data-toggle="tab">Gráfica 2</a></li>
+    <li><a href="#smi-indicador-grafica" data-toggle="tab">Gráfica</a></li>
     <li><a href="#smi-indicador-otras-regiones" data-toggle="tab">Otras regiones</a></li>
   </ul>
   <div class="tab-content lengueta-contenido">
@@ -152,16 +151,6 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>31/12/2007</td>
-            <td>386</td>
-            <td>Doing Business</td>
-            <td>En el tema de apertura de negocio Doing Business califica otros dos aspectos. Los resultados de 2007 para Torreón son: 
-
-- Índice de complejidad (1-100): 84 
-- Costo (% de la deuda): 20
-- Ranking en ejecución de contratos: 19</td>
-          </tr>
           <tr>
             <td>31/12/2008</td>
             <td>386</td>
@@ -189,33 +178,7 @@
           <tr>
             <td>31/12/2012</td>
             <td>270</td>
-            <td>Doing Business</td>
-            <td>En el tema de apertura de negocio Doing Business califica otros dos aspectos. Los resultados de 2012 para Torreón son: 
-
-- # de procedimientos: 37 
-- Costo (% de cantidad demandada): 27.9 
-- Ranking en ejecución de contratos: 7</td>
-          </tr>
-          <tr>
-            <td>31/12/2012</td>
-            <td>270</td>
             <td>IMCO</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>31/10/2013</td>
-            <td>270</td>
-            <td>Doing Business</td>
-            <td>Dato obtenido del estudio elaborado por Doing Business de octubre de 2011 a octubre de 2013 y publicado en su reporte Doing Business en México 2014. 
-
-Los Indicadores complementarios en ejecución de contratos fueron los siguientes para Torreón: 
-Procedimientos (número) = 37 ; 
-Costo (% de cantidad demandada) = 27,9</td>
-          </tr>
-          <tr>
-            <td>31/12/2015</td>
-            <td>200</td>
-            <td>Doing Business</td>
             <td></td>
           </tr>
         </tbody>
@@ -225,17 +188,9 @@ Costo (% de cantidad demandada) = 27,9</td>
 <p>Fuente: Doing Business en México, 2007, 2009, 2012.</p>
 
     </div>
-    <div class="tab-pane" id="smi-indicador-grafica-1">
-            <h3>Gráfica de Ejecución de Contratos en Torreón con fuente Doing Business</h3>
-      <div id="graficaDatosDoingBusiness" class="grafica"></div>
-      <p><b>Unidad:</b> Días.</p>
-      <h3>Observaciones</h3>
-<p>Fuente: Doing Business en México, 2007, 2009, 2012.</p>
-
-    </div>
-    <div class="tab-pane" id="smi-indicador-grafica-2">
-            <h3>Gráfica de Ejecución de Contratos en Torreón con fuente IMCO</h3>
-      <div id="graficaDatosImco" class="grafica"></div>
+    <div class="tab-pane" id="smi-indicador-grafica">
+            <h3>Gráfica de Ejecución de Contratos en Torreón</h3>
+      <div id="graficaDatos" class="grafica"></div>
       <p><b>Unidad:</b> Días.</p>
       <h3>Observaciones</h3>
 <p>Fuente: Doing Business en México, 2007, 2009, 2012.</p>
@@ -258,35 +213,35 @@ Costo (% de cantidad demandada) = 27,9</td>
         <tbody>
           <tr>
             <td>Torreón</td>
-            <td>2015-12-31</td>
-            <td>200</td>
-            <td>Doing Business</td>
+            <td>31/12/2012</td>
+            <td>270</td>
+            <td>IMCO</td>
             <td></td>
           </tr>
           <tr>
             <td>Gómez Palacio</td>
-            <td>2012-12-31</td>
+            <td>31/12/2012</td>
             <td>243</td>
             <td>IMCO</td>
             <td></td>
           </tr>
           <tr>
             <td>Lerdo</td>
-            <td>2012-12-31</td>
+            <td>31/12/2012</td>
             <td>243</td>
             <td>IMCO</td>
             <td></td>
           </tr>
           <tr>
             <td>Matamoros</td>
-            <td>2012-12-31</td>
+            <td>31/12/2012</td>
             <td>270</td>
             <td>IMCO</td>
             <td></td>
           </tr>
           <tr>
             <td>La Laguna</td>
-            <td>2012-12-31</td>
+            <td>31/12/2012</td>
             <td>256.5000</td>
             <td>IMCO</td>
             <td></td>
@@ -336,23 +291,10 @@ Costo (% de cantidad demandada) = 27,9</td>
 <script type="text/javascript" src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
 <!-- Javascript: Inicia  -->
 <script>
-$('#smi-indicador a[href="#smi-indicador-grafica-1"]').on('shown.bs.tab', function (e) {   // Gráfica
-  if (typeof vargraficaDatosDoingBusiness === 'undefined') {
-    vargraficaDatosDoingBusiness = Morris.Line({
-      element: 'graficaDatosDoingBusiness',
-      data: [{ fecha: '2007-12-31', dato: 386 },{ fecha: '2012-12-31', dato: 270 },{ fecha: '2013-10-31', dato: 270 },{ fecha: '2015-12-31', dato: 200 }],
-      xkey: 'fecha',
-      ykeys: ['dato'],
-      labels: ['Dato'],
-      lineColors: ['#FF5B02'],
-      xLabelFormat: function(d) { return d.getDate()+'/'+(d.getMonth()+1)+'/'+d.getFullYear(); },
-      dateFormat: function(ts) { var d = new Date(ts); return d.getDate() + '/' + (d.getMonth() + 1) + '/' + d.getFullYear(); }
-    });
-  } });
-$('#smi-indicador a[href="#smi-indicador-grafica-2"]').on('shown.bs.tab', function (e) {   // Gráfica
-  if (typeof vargraficaDatosImco === 'undefined') {
-    vargraficaDatosImco = Morris.Line({
-      element: 'graficaDatosImco',
+$('#smi-indicador a[href="#smi-indicador-grafica"]').on('shown.bs.tab', function (e) {   // Gráfica
+  if (typeof vargraficaDatos === 'undefined') {
+    vargraficaDatos = Morris.Line({
+      element: 'graficaDatos',
       data: [{ fecha: '2008-12-31', dato: 386 },{ fecha: '2009-12-31', dato: 270 },{ fecha: '2010-12-31', dato: 270 },{ fecha: '2011-12-31', dato: 270 },{ fecha: '2012-12-31', dato: 270 }],
       xkey: 'fecha',
       ykeys: ['dato'],
@@ -366,7 +308,7 @@ $('#smi-indicador a[href="#smi-indicador-otras-regiones"]').on('shown.bs.tab', f
   if (typeof vargraficaOtrasRegiones === 'undefined') {
     vargraficaOtrasRegiones = Morris.Bar({
       element: 'graficaOtrasRegiones',
-      data: [{ region: 'Torreón', dato: 200 },{ region: 'Gómez Palacio', dato: 243 },{ region: 'Lerdo', dato: 243 },{ region: 'Matamoros', dato: 270 },{ region: 'La Laguna', dato: 256.5000 }],
+      data: [{ region: 'Torreón', dato: 270 },{ region: 'Gómez Palacio', dato: 243 },{ region: 'Lerdo', dato: 243 },{ region: 'Matamoros', dato: 270 },{ region: 'La Laguna', dato: 256.5000 }],
       xkey: 'region',
       ykeys: ['dato'],
       labels: ['Dato'],

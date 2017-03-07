@@ -362,42 +362,42 @@ FINAL;
         <tbody>
           <tr>
             <td>Torreón</td>
-            <td>2017-01-31</td>
+            <td>31/01/2017</td>
             <td>59</td>
             <td>Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública</td>
             <td></td>
           </tr>
           <tr>
             <td>Gómez Palacio</td>
-            <td>2017-01-31</td>
+            <td>31/01/2017</td>
             <td>30</td>
             <td>Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública</td>
             <td></td>
           </tr>
           <tr>
             <td>Lerdo</td>
-            <td>2017-01-31</td>
+            <td>31/01/2017</td>
             <td>9</td>
             <td>Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública</td>
             <td></td>
           </tr>
           <tr>
             <td>Matamoros</td>
-            <td>2017-01-31</td>
+            <td>31/01/2017</td>
             <td>11</td>
             <td>Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública</td>
             <td></td>
           </tr>
           <tr>
             <td>La Laguna</td>
-            <td>2017-01-31</td>
+            <td>31/01/2017</td>
             <td>109</td>
             <td>Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública</td>
             <td></td>
           </tr>
           <tr>
             <td>Coahuila</td>
-            <td>2016-07-31</td>
+            <td>31/07/2016</td>
             <td>86</td>
             <td>Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública</td>
             <td></td>

@@ -135,7 +135,7 @@
 <!-- Contenido: Inicia  -->
   <ul class="nav nav-tabs lenguetas" id="smi-indicador">
     <li class="active"><a href="#smi-indicador-datos" data-toggle="tab">Datos</a></li>
-    <li><a href="#smi-indicador-grafica-1" data-toggle="tab">Gráfica 1</a></li>
+    <li><a href="#smi-indicador-grafica" data-toggle="tab">Gráfica</a></li>
     <li><a href="#smi-indicador-otras-regiones" data-toggle="tab">Otras regiones</a></li>
   </ul>
   <div class="tab-content lengueta-contenido">
@@ -181,12 +181,6 @@
             <td>IMCO</td>
             <td></td>
           </tr>
-          <tr>
-            <td>24/05/2016</td>
-            <td>0.0309</td>
-            <td>Centro Mexicano para la Filantropía (Cemefi)</td>
-            <td></td>
-          </tr>
         </tbody>
       </table>
       <p><b>Unidad:</b> Por cada 10 mil.</p>
@@ -194,9 +188,9 @@
 <p>Fuente: Centro Mexicano para la Filantropía (CEMEFI).</p>
 
     </div>
-    <div class="tab-pane" id="smi-indicador-grafica-1">
-            <h3>Gráfica de Empresas Socialmente Responsables en Torreón con fuente IMCO</h3>
-      <div id="graficaDatosImco" class="grafica"></div>
+    <div class="tab-pane" id="smi-indicador-grafica">
+            <h3>Gráfica de Empresas Socialmente Responsables en Torreón</h3>
+      <div id="graficaDatos" class="grafica"></div>
       <p><b>Unidad:</b> Por cada 10 mil.</p>
       <h3>Observaciones</h3>
 <p>Fuente: Centro Mexicano para la Filantropía (CEMEFI).</p>
@@ -219,37 +213,37 @@
         <tbody>
           <tr>
             <td>Torreón</td>
-            <td>2016-05-24</td>
-            <td>0.0309</td>
-            <td>Centro Mexicano para la Filantropía (Cemefi)</td>
+            <td>31/12/2012</td>
+            <td>0.0000</td>
+            <td>IMCO</td>
             <td></td>
           </tr>
           <tr>
             <td>Gómez Palacio</td>
-            <td>2016-05-24</td>
-            <td>0.0214</td>
-            <td>Centro Mexicano para la Filantropía (Cemefi)</td>
+            <td>31/12/2012</td>
+            <td>10.4167</td>
+            <td>IMCO</td>
             <td></td>
           </tr>
           <tr>
             <td>Lerdo</td>
-            <td>2016-05-24</td>
+            <td>31/12/2012</td>
             <td>0.0000</td>
-            <td>Centro Mexicano para la Filantropía (Cemefi)</td>
+            <td>IMCO</td>
             <td></td>
           </tr>
           <tr>
             <td>Matamoros</td>
-            <td>2016-05-24</td>
+            <td>31/12/2012</td>
             <td>0.0000</td>
-            <td>Centro Mexicano para la Filantropía (Cemefi)</td>
+            <td>IMCO</td>
             <td></td>
           </tr>
           <tr>
             <td>La Laguna</td>
-            <td>2016-05-24</td>
-            <td>0.0241</td>
-            <td>Centro Mexicano para la Filantropía (Cemefi)</td>
+            <td>31/12/2012</td>
+            <td>2.4596</td>
+            <td>IMCO</td>
             <td></td>
           </tr>
         </tbody>
@@ -297,10 +291,10 @@
 <script type="text/javascript" src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
 <!-- Javascript: Inicia  -->
 <script>
-$('#smi-indicador a[href="#smi-indicador-grafica-1"]').on('shown.bs.tab', function (e) {   // Gráfica
-  if (typeof vargraficaDatosImco === 'undefined') {
-    vargraficaDatosImco = Morris.Line({
-      element: 'graficaDatosImco',
+$('#smi-indicador a[href="#smi-indicador-grafica"]').on('shown.bs.tab', function (e) {   // Gráfica
+  if (typeof vargraficaDatos === 'undefined') {
+    vargraficaDatos = Morris.Line({
+      element: 'graficaDatos',
       data: [{ fecha: '2008-12-31', dato: 0.1900 },{ fecha: '2009-12-31', dato: 0.0000 },{ fecha: '2010-12-31', dato: 0.0000 },{ fecha: '2011-12-31', dato: 0.0000 },{ fecha: '2012-12-31', dato: 0.0000 }],
       xkey: 'fecha',
       ykeys: ['dato'],
@@ -314,7 +308,7 @@ $('#smi-indicador a[href="#smi-indicador-otras-regiones"]').on('shown.bs.tab', f
   if (typeof vargraficaOtrasRegiones === 'undefined') {
     vargraficaOtrasRegiones = Morris.Bar({
       element: 'graficaOtrasRegiones',
-      data: [{ region: 'Torreón', dato: 0.0309 },{ region: 'Gómez Palacio', dato: 0.0214 },{ region: 'Lerdo', dato: 0.0000 },{ region: 'Matamoros', dato: 0.0000 },{ region: 'La Laguna', dato: 0.0241 }],
+      data: [{ region: 'Torreón', dato: 0.0000 },{ region: 'Gómez Palacio', dato: 10.4167 },{ region: 'Lerdo', dato: 0.0000 },{ region: 'Matamoros', dato: 0.0000 },{ region: 'La Laguna', dato: 2.4596 }],
       xkey: 'region',
       ykeys: ['dato'],
       labels: ['Dato'],
