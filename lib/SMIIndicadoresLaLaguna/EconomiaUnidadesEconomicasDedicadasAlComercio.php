@@ -182,37 +182,9 @@ FINAL;
             <td></td>
           </tr>
           <tr>
-            <td>Gómez Palacio</td>
-            <td>31/12/2014</td>
-            <td>41.70 %</td>
-            <td>INEGI</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Lerdo</td>
-            <td>31/12/2014</td>
-            <td>44.09 %</td>
-            <td>INEGI</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Matamoros</td>
-            <td>31/12/2014</td>
-            <td>48.61 %</td>
-            <td>INEGI</td>
-            <td></td>
-          </tr>
-          <tr>
             <td>La Laguna</td>
             <td>31/12/2014</td>
             <td>41.65 %</td>
-            <td>INEGI</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Nacional</td>
-            <td>31/10/2013</td>
-            <td>46.67 %</td>
             <td>INEGI</td>
             <td></td>
           </tr>
@@ -236,7 +208,7 @@ FINAL;
   if (typeof vargraficaOtrasRegiones === 'undefined') {
     vargraficaOtrasRegiones = Morris.Bar({
       element: 'graficaOtrasRegiones',
-      data: [{ region: 'Torreón', dato: 40.5365 },{ region: 'Gómez Palacio', dato: 41.7020 },{ region: 'Lerdo', dato: 44.0892 },{ region: 'Matamoros', dato: 48.6102 },{ region: 'La Laguna', dato: 41.6515 },{ region: 'Nacional', dato: 46.6700 }],
+      data: [{ region: 'Torreón', dato: 40.5365 },{ region: 'La Laguna', dato: 41.6515 }],
       xkey: 'region',
       ykeys: ['dato'],
       labels: ['Dato'],

@@ -182,27 +182,6 @@ FINAL;
             <td></td>
           </tr>
           <tr>
-            <td>Gómez Palacio</td>
-            <td>31/12/2012</td>
-            <td>5.44 %</td>
-            <td>IMCO</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Lerdo</td>
-            <td>31/12/2012</td>
-            <td>5.94 %</td>
-            <td>IMCO</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Matamoros</td>
-            <td>31/12/2012</td>
-            <td>5.38 %</td>
-            <td>IMCO</td>
-            <td></td>
-          </tr>
-          <tr>
             <td>La Laguna</td>
             <td>31/12/2012</td>
             <td>5.86 %</td>
@@ -229,7 +208,7 @@ FINAL;
   if (typeof vargraficaOtrasRegiones === 'undefined') {
     vargraficaOtrasRegiones = Morris.Bar({
       element: 'graficaOtrasRegiones',
-      data: [{ region: 'Torreón', dato: 5.9100 },{ region: 'Gómez Palacio', dato: 5.4400 },{ region: 'Lerdo', dato: 5.9400 },{ region: 'Matamoros', dato: 5.3800 },{ region: 'La Laguna', dato: 5.8600 }],
+      data: [{ region: 'Torreón', dato: 5.9100 },{ region: 'La Laguna', dato: 5.8600 }],
       xkey: 'region',
       ykeys: ['dato'],
       labels: ['Dato'],

@@ -219,37 +219,9 @@
             <td></td>
           </tr>
           <tr>
-            <td>Gómez Palacio</td>
-            <td>31/12/2014</td>
-            <td>46.13 %</td>
-            <td>INEGI</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Lerdo</td>
-            <td>31/12/2014</td>
-            <td>43.36 %</td>
-            <td>INEGI</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Matamoros</td>
-            <td>31/12/2014</td>
-            <td>40.90 %</td>
-            <td>INEGI</td>
-            <td></td>
-          </tr>
-          <tr>
             <td>La Laguna</td>
             <td>31/12/2014</td>
             <td>47.30 %</td>
-            <td>INEGI</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Nacional</td>
-            <td>31/10/2013</td>
-            <td>38.66 %</td>
             <td>INEGI</td>
             <td></td>
           </tr>
@@ -315,7 +287,7 @@ $('#smi-indicador a[href="#smi-indicador-otras-regiones"]').on('shown.bs.tab', f
   if (typeof vargraficaOtrasRegiones === 'undefined') {
     vargraficaOtrasRegiones = Morris.Bar({
       element: 'graficaOtrasRegiones',
-      data: [{ region: 'Torreón', dato: 49.0168 },{ region: 'Gómez Palacio', dato: 46.1335 },{ region: 'Lerdo', dato: 43.3638 },{ region: 'Matamoros', dato: 40.9001 },{ region: 'La Laguna', dato: 47.3005 },{ region: 'Nacional', dato: 38.6600 }],
+      data: [{ region: 'Torreón', dato: 49.0168 },{ region: 'La Laguna', dato: 47.3005 }],
       xkey: 'region',
       ykeys: ['dato'],
       labels: ['Dato'],

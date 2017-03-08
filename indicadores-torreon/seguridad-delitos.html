@@ -399,27 +399,6 @@
             <td></td>
           </tr>
           <tr>
-            <td>Gómez Palacio</td>
-            <td>31/01/2017</td>
-            <td>614</td>
-            <td>Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Lerdo</td>
-            <td>31/01/2017</td>
-            <td>205</td>
-            <td>Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Matamoros</td>
-            <td>31/01/2017</td>
-            <td>110</td>
-            <td>Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública</td>
-            <td></td>
-          </tr>
-          <tr>
             <td>La Laguna</td>
             <td>31/01/2017</td>
             <td>1888</td>
@@ -485,7 +464,7 @@ $('#smi-indicador a[href="#smi-indicador-otras-regiones"]').on('shown.bs.tab', f
   if (typeof vargraficaOtrasRegiones === 'undefined') {
     vargraficaOtrasRegiones = Morris.Bar({
       element: 'graficaOtrasRegiones',
-      data: [{ region: 'Torreón', dato: 959 },{ region: 'Gómez Palacio', dato: 614 },{ region: 'Lerdo', dato: 205 },{ region: 'Matamoros', dato: 110 },{ region: 'La Laguna', dato: 1888 }],
+      data: [{ region: 'Torreón', dato: 959 },{ region: 'La Laguna', dato: 1888 }],
       xkey: 'region',
       ykeys: ['dato'],
       labels: ['Dato'],

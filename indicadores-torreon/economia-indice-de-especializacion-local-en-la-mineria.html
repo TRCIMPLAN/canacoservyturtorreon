@@ -219,27 +219,6 @@
             <td></td>
           </tr>
           <tr>
-            <td>Gómez Palacio</td>
-            <td>31/12/2008</td>
-            <td>0.20 %</td>
-            <td>INEGI</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Lerdo</td>
-            <td>31/12/2008</td>
-            <td>2.80 %</td>
-            <td>INEGI</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Matamoros</td>
-            <td>31/12/2008</td>
-            <td>0.40 %</td>
-            <td>INEGI</td>
-            <td></td>
-          </tr>
-          <tr>
             <td>La Laguna</td>
             <td>31/12/2008</td>
             <td>1.03 %</td>
@@ -314,7 +293,7 @@ $('#smi-indicador a[href="#smi-indicador-otras-regiones"]').on('shown.bs.tab', f
   if (typeof vargraficaOtrasRegiones === 'undefined') {
     vargraficaOtrasRegiones = Morris.Bar({
       element: 'graficaOtrasRegiones',
-      data: [{ region: 'Torreón', dato: 1.4000 },{ region: 'Gómez Palacio', dato: 0.2000 },{ region: 'Lerdo', dato: 2.8000 },{ region: 'Matamoros', dato: 0.4000 },{ region: 'La Laguna', dato: 1.0300 }],
+      data: [{ region: 'Torreón', dato: 1.4000 },{ region: 'La Laguna', dato: 1.0300 }],
       xkey: 'region',
       ykeys: ['dato'],
       labels: ['Dato'],

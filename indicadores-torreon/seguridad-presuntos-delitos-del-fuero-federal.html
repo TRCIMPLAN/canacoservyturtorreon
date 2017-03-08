@@ -133,7 +133,6 @@
 <!-- Contenido: Inicia  -->
   <ul class="nav nav-tabs lenguetas" id="smi-indicador">
     <li class="active"><a href="#smi-indicador-datos" data-toggle="tab">Datos</a></li>
-    <li><a href="#smi-indicador-otras-regiones" data-toggle="tab">Otras regiones</a></li>
   </ul>
   <div class="tab-content lengueta-contenido">
     <div class="tab-pane active" id="smi-indicador-datos">
@@ -151,56 +150,6 @@
           <tr>
             <td>31/12/2012</td>
             <td>90</td>
-            <td>INEGI</td>
-            <td>Fuente: [INEGI](http://www.inegi.org.mx/est/lista_cubos/consulta.aspx?p=gob&c=5)</td>
-          </tr>
-        </tbody>
-      </table>
-      <p><b>Unidad:</b> Cantidad.</p>
-      <h3>Observaciones</h3>
-<p>Fuente: <a href="http://www.inegi.org.mx/est/lista_cubos/consulta.aspx?p=gob&amp;c=5">INEGI</a></p>
-
-    </div>
-    <div class="tab-pane" id="smi-indicador-otras-regiones">
-            <h3>Gráfica con los últimos datos de Presuntos Delitos del Fuero Federal</h3>
-      <div id="graficaOtrasRegiones" class="grafica"></div>
-      <h3>Últimos datos de Presuntos Delitos del Fuero Federal</h3>
-      <table class="table table-hover table-bordered matriz">
-        <thead>
-          <tr>
-            <th>Región</th>
-            <th>Fecha</th>
-            <th>Dato</th>
-            <th>Fuente</th>
-            <th>Notas</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Torreón</td>
-            <td>31/12/2012</td>
-            <td>90</td>
-            <td>INEGI</td>
-            <td>Fuente: [INEGI](http://www.inegi.org.mx/est/lista_cubos/consulta.aspx?p=gob&c=5)</td>
-          </tr>
-          <tr>
-            <td>Gómez Palacio</td>
-            <td>31/12/2012</td>
-            <td>9</td>
-            <td>INEGI</td>
-            <td>Fuente: [INEGI](http://www.inegi.org.mx/est/lista_cubos/consulta.aspx?p=gob&c=5)</td>
-          </tr>
-          <tr>
-            <td>Lerdo</td>
-            <td>31/12/2012</td>
-            <td>No tiene</td>
-            <td>INEGI</td>
-            <td>Fuente: [INEGI](http://www.inegi.org.mx/est/lista_cubos/consulta.aspx?p=gob&c=5)</td>
-          </tr>
-          <tr>
-            <td>Matamoros</td>
-            <td>31/12/2012</td>
-            <td>19</td>
             <td>INEGI</td>
             <td>Fuente: [INEGI](http://www.inegi.org.mx/est/lista_cubos/consulta.aspx?p=gob&c=5)</td>
           </tr>
@@ -249,17 +198,6 @@
 <script type="text/javascript" src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
 <!-- Javascript: Inicia  -->
 <script>
-$('#smi-indicador a[href="#smi-indicador-otras-regiones"]').on('shown.bs.tab', function (e) {   // Gráfica
-  if (typeof vargraficaOtrasRegiones === 'undefined') {
-    vargraficaOtrasRegiones = Morris.Bar({
-      element: 'graficaOtrasRegiones',
-      data: [{ region: 'Torreón', dato: 90 },{ region: 'Gómez Palacio', dato: 9 },{ region: 'Lerdo', dato: 0 },{ region: 'Matamoros', dato: 19 }],
-      xkey: 'region',
-      ykeys: ['dato'],
-      labels: ['Dato'],
-      barColors: ['#FF5B02']
-    });
-  } });
 $(document).ready(function(){ $('#smi-indicador a:first').tab('show') });
 </script>
 <script>

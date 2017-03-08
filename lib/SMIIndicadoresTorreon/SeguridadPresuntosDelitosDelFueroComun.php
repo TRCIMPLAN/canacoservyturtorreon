@@ -91,85 +91,6 @@ FINAL;
     } // seccion_datos_html
 
     /**
-     * Sección Otras Regiones HTML
-     *
-     * @return string Código HTML
-     */
-    protected function seccion_otras_regiones_html() {
-        return <<<FINAL
-      <h3>Gráfica con los últimos datos de Presuntos Delitos del Fuero Común</h3>
-      <div id="graficaOtrasRegiones" class="grafica"></div>
-      <h3>Últimos datos de Presuntos Delitos del Fuero Común</h3>
-      <table class="table table-hover table-bordered matriz">
-        <thead>
-          <tr>
-            <th>Región</th>
-            <th>Fecha</th>
-            <th>Dato</th>
-            <th>Fuente</th>
-            <th>Notas</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Torreón</td>
-            <td>31/12/2012</td>
-            <td>6647</td>
-            <td>INEGI</td>
-            <td>Fuente: [INEGI](http://www.inegi.org.mx/est/lista_cubos/consulta.aspx?p=gob&c=5)</td>
-          </tr>
-          <tr>
-            <td>Gómez Palacio</td>
-            <td>31/12/2012</td>
-            <td>13584</td>
-            <td>INEGI</td>
-            <td>Fuente: [INEGI](http://www.inegi.org.mx/est/lista_cubos/consulta.aspx?p=gob&c=5)</td>
-          </tr>
-          <tr>
-            <td>Lerdo</td>
-            <td>31/12/2012</td>
-            <td>No tiene</td>
-            <td>INEGI</td>
-            <td>Fuente: [INEGI](http://www.inegi.org.mx/est/lista_cubos/consulta.aspx?p=gob&c=5)</td>
-          </tr>
-          <tr>
-            <td>Matamoros</td>
-            <td>31/12/2012</td>
-            <td>1100</td>
-            <td>INEGI</td>
-            <td>Fuente: [INEGI](http://www.inegi.org.mx/est/lista_cubos/consulta.aspx?p=gob&c=5)</td>
-          </tr>
-        </tbody>
-      </table>
-      <p><b>Unidad:</b> Cantidad.</p>
-      <h3>Observaciones</h3>
-<p>Fuente: <a href="http://www.inegi.org.mx/est/lista_cubos/consulta.aspx?p=gob&amp;c=5">INEGI</a></p>
-
-FINAL;
-    } // seccion_otras_regiones_html
-
-    /**
-     * Sección Otras Regiones JavaScript
-     *
-     * @return string Código JavaScript
-     */
-    protected function seccion_otras_regiones_javascript() {
-        return <<<FINAL
-  // Gráfica
-  if (typeof vargraficaOtrasRegiones === 'undefined') {
-    vargraficaOtrasRegiones = Morris.Bar({
-      element: 'graficaOtrasRegiones',
-      data: [{ region: 'Torreón', dato: 6647 },{ region: 'Gómez Palacio', dato: 13584 },{ region: 'Lerdo', dato: 0 },{ region: 'Matamoros', dato: 1100 }],
-      xkey: 'region',
-      ykeys: ['dato'],
-      labels: ['Dato'],
-      barColors: ['#FF5B02']
-    });
-  }
-FINAL;
-    } // seccion_otras_regiones_javascript
-
-    /**
      * HTML
      *
      * @return string Código HTML
@@ -177,8 +98,6 @@ FINAL;
     public function html() {
         // Ejecutar los métodos que alimentan cada lengüeta
         $this->lenguetas->agregar('smi-indicador-datos', 'Datos', $this->seccion_datos_html());
-        $this->lenguetas->agregar('smi-indicador-otras-regiones', 'Otras regiones', $this->seccion_otras_regiones_html());
-        $this->lenguetas->agregar_javascript($this->seccion_otras_regiones_javascript());
         $this->lenguetas->definir_activa(); // Primer lengüeta activa
         // Definir contenido HTML en el esquema
         $this->contenido->articleBody = $this->lenguetas->html();
