@@ -69,6 +69,40 @@ class PaginaInicialConfig extends \Base\Plantilla {
     } // organizacion
 
     /**
+     * Servicios
+     */
+    protected function servicios() {
+        // SMI
+        $smi              = new \PaginaInicial\Destacado();
+        $smi->name        = 'Sistema Metropolitano de Indicadores';
+        $smi->description = 'Mantenemos al día indicadores en 5 grandes temas: Seguridad, Gobierno, Sustentabilidad, Economía y Sociedad para los municipios de la Laguna.';
+        $smi->image       = 'servicio-smi';
+        $smi->url         = 'indicadores-categorias/index.html';
+        $smi->botones     = array(
+            '<i class="fa fa-th-list"></i> Por Categoría'        => 'indicadores-categorias/index.html');
+        // SIG
+        $sig              = new \PaginaInicial\Destacado();
+        $sig->name        = 'Sistema de Información Geográfica';
+        $sig->description = 'La representación de datos de diversas fuentes sobre mapas georreferenciados para su fácil análisis constituye una excelente herramienta para todos.';
+        $sig->image       = 'servicio-sig';
+        $sig->url         = 'sig-mapas-torreon/index.html';
+        $sig->botones     = array(
+            '<i class="fa fa-server"></i> Planes'               => 'sig-planes/index.html',
+            '<i class="fa fa-map-marker"></i> Mapas de Torreón' => 'sig-mapas-torreon/index.html');
+        // Acumular sección destacado
+        $this->contenido[]  = '  <section id="destacado">';
+        $this->contenido[]  = '    <div class="row">';
+        $this->contenido[]  = '      <div class="col-sm-6 col-md-6">';
+        $this->contenido[]  = $smi->html();
+        $this->contenido[]  = '      </div>';
+        $this->contenido[]  = '      <div class="col-sm-6 col-md-6">';
+        $this->contenido[]  = $sig->html();
+        $this->contenido[]  = '      </div>';
+        $this->contenido[]  = '    </div>';
+        $this->contenido[]  = '  </section>';
+    } // servicios
+
+    /**
      * Últimas publicaciones
      */
     protected function ultimas_publicaciones() {
@@ -114,7 +148,7 @@ class PaginaInicialConfig extends \Base\Plantilla {
     public function html() {
         // Elaborar secciones
         $this->organizacion();
-    //~ $this->servicios();
+        $this->servicios();
         $this->ultimas_publicaciones();
     //~ $this->categorias();
     //~ $this->mapa();
