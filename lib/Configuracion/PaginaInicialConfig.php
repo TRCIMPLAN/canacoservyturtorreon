@@ -150,9 +150,6 @@ class PaginaInicialConfig extends \Base\Plantilla {
         $this->organizacion();
         $this->servicios();
         $this->ultimas_publicaciones();
-    //~ $this->categorias();
-    //~ $this->mapa();
-    //~ $this->redes();
         // Entregar resultado del método en el padre
         return parent::html();
     } // html
